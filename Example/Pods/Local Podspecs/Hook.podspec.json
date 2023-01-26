@@ -1,0 +1,22 @@
+{
+  "name": "Hook",
+  "version": "0.1.0",
+  "summary": "A short description of Hook.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/lyfeoncloudnine/Hook",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "lyfeoncloudnine": "lyfeoncloudnine@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/lyfeoncloudnine/Hook.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "Hook/Classes/**/*"
+}

@@ -1,0 +1,16 @@
+PODS:
+  - Hook (0.1.0)
+
+DEPENDENCIES:
+  - Hook (from `../`)
+
+EXTERNAL SOURCES:
+  Hook:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Hook: 4bccdb6dcb5a29f0afa5ed9f090c7ba47731e9b2
+
+PODFILE CHECKSUM: 12633f85a167b98e49892f9d9ab4083c7d59dab3
+
+COCOAPODS: 1.11.3
