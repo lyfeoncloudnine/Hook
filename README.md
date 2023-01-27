@@ -53,7 +53,7 @@ redView.hook.height(equalTo: greenView.heightAnchor)
 
 ## Comparison
 
-* NSLayoutConstraint
+### NSLayoutConstraint
 
 ```swift
 addSubview(aView)
@@ -75,7 +75,7 @@ NSLayoutConstraint.activate([
 ])
 ```
 
-* Hook
+### Hook
 
 ```swift
 addSubviews(aView, bView)
@@ -120,13 +120,28 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+iOS 11.0+
+
 ## Installation
 
-Hook is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+### Cocoapods
+
+Hook is available through [CocoaPods](https://cocoapods.org). 
+To installit, simply add the following line to your `Podfile`:
 
 ```ruby
 pod 'Hook'
+```
+
+### SPM
+
+Hook is available also SPM. 
+To install it, simply add the following line to your `Package.swift` file:
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/lyfeoncloudnine/Hook.git", .upToNextMajor(from: "1.0.0"))
+]
 ```
 
 ## Author
