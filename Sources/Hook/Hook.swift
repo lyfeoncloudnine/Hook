@@ -1,3 +1,5 @@
+import UIKit
+
 public extension UIView {
     var hook: Hook {
         Hook(view: self)
