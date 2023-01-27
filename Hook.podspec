@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Hook'
-  s.version          = '1.0.1'
+  s.version          = '1.0.2'
   s.summary          = 'Hook makes code based autolayout simple and faster through chaining.'
   s.homepage         = 'https://github.com/lyfeoncloudnine/Hook'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
