@@ -4,7 +4,7 @@ public extension UIView {
     }
     
     final class Hook {
-        private var view: UIView
+        fileprivate var view: UIView
         
         init(view: UIView) {
             self.view = view
@@ -353,3 +353,31 @@ public extension UIView.Hook {
     }
 }
 
+// MARK: - Util
+
+public extension UIView.Hook {
+    func constraint(_ attribute: NSLayoutConstraint.Attribute) -> NSLayoutConstraint? {
+        if attribute == .width || attribute == .height {
+            return lookForConstraint(in: self.view.superview, attribute: attribute) ?? lookForConstraint(in: self.view, attribute: attribute)
+        } else {
+            return lookForConstraint(in: self.view.superview, attribute: attribute)
+        }
+    }
+    
+    private func lookForConstraint(in view: UIView?, attribute: NSLayoutConstraint.Attribute) -> NSLayoutConstraint? {
+        guard let constraints = view?.constraints else { return nil }
+        
+        for constraint in constraints {
+            if let firstItem = constraint.firstItem as? NSObject,
+               firstItem == self.view && constraint.firstAttribute == attribute {
+                return constraint
+            }
+            if let secondItem = constraint.secondItem as? NSObject,
+               secondItem == self.view && constraint.secondAttribute == attribute {
+                return constraint
+            }
+        }
+        
+        return nil
+    }
+}
