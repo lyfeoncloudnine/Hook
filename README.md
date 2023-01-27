@@ -1,11 +1,12 @@
 # Hook
 
-[![CI Status](https://img.shields.io/travis/lyfeoncloudnine/Hook.svg?style=flat)](https://travis-ci.org/lyfeoncloudnine/Hook)
 [![Version](https://img.shields.io/cocoapods/v/Hook.svg?style=flat)](https://cocoapods.org/pods/Hook)
 [![License](https://img.shields.io/cocoapods/l/Hook.svg?style=flat)](https://cocoapods.org/pods/Hook)
 [![Platform](https://img.shields.io/cocoapods/p/Hook.svg?style=flat)](https://cocoapods.org/pods/Hook)
 
 ## Quick Guide
+
+<img src="/Assets/Screen Shot.png" width="400">
 
 ```swift
 let yellowView = UIView()
@@ -50,7 +51,68 @@ greenView.hook.height(equalToConstant: 200)
 redView.hook.height(equalTo: greenView.heightAnchor)
 ```
 
-<img src="/Assets/Screen Shot.png" width="400">
+## Comparison
+
+* NSLayoutConstraint
+
+```swift
+addSubview(aView)
+aView.translatesAutoresizingMaskIntoConstraints = false
+
+addSubview(bView)
+bView.translatesAutoresizingMaskIntoConstraints = false
+
+NSLayoutConstraint.activate([
+    aView.topAnchor.constraint(equalTo: topAnchor),
+    aView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+    aView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+    aView.heightAnchor.constraint(greaterThanOrEqualToConstant: 40),
+
+    bView.topAnchor.constraint(equalTo: aView.bottomAnchor, constant: 10),
+    bView.centerXAnchor.constraint(equalTo: aView.centerXAnchor),
+    bView.widthAnchor.constraint(equalTo: aView.widthAnchor, multiplier: 1.2),
+    bView.heightAnchor.constraint(lessThanOrEqualTo: aView.heightAnchor)
+])
+```
+
+* Hook
+
+```swift
+addSubviews(aView, bView)
+
+aView.hook
+    .top(to: topAnchor)
+    .leading(to: leadingAnchor, constant: 20)
+    .trailing(to: trailingAnchor, constant: -20)
+    .height(greaterThanOrEqualConstant: 40)
+
+bView.hook
+    .top(to: aView.bottomAnchor, constant: 10)
+    .centerX(to: aView.centerXAnchor)
+    .width(to: aView.widthAnchor, multiplier: 1.2)
+    .height(lessThanOrEqualTo: aView.heightAnchor)
+```
+
+You can reduce typing via `all(to:useSafeArea:)`.
+
+```swift
+bView.hook.all(to: self)
+```
+
+And you can easily set priority via `priority` parameter.
+
+```swift
+bView.hook.height(to: aView.height, priority: .defaultLow)
+```
+
+Also, you can easily access `NSLayoutConstraint` via `constraint(_:)`.
+
+```swift
+bView.hook.constraint(.height)?.isActive = false
+bView.hook.height(equalToConstant: 300)
+// OR
+bView.hook.constraint(.height)?.constant = 20
+```
 
 ## Example
 
