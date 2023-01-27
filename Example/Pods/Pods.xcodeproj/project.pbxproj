@@ -12,9 +12,9 @@
 		28E5B5838FD03F971E20C43A4B9D70E2 /* Hook-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 86DED82750748F3853FD6068DBB8A536 /* Hook-dummy.m */; };
 		744CA957AC73F49274A871FCF802F15F /* Pods-Hook_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C94CCE6945C7C9B0E19D30C2857F1B01 /* Pods-Hook_Example-dummy.m */; };
 		9CC8F514A7BCEACC15B5AF036C8D02FD /* Pods-Hook_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 622677DF3D7D732C4DEB6D7A49EFF526 /* Pods-Hook_Tests-dummy.m */; };
-		A11EBD112982C3D30010BC84 /* Hook.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11EBD0F2982C3D30010BC84 /* Hook.swift */; };
-		A11EBD122982C3D30010BC84 /* Hook+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11EBD102982C3D30010BC84 /* Hook+Helper.swift */; };
 		AE4533EA155CEB33E6F0F74994EE8E99 /* Pods-Hook_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C8275120823159D6846B1FF56D04DB7D /* Pods-Hook_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B2EB12CB2983963C009B1271 /* Hook+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EB12C92983963C009B1271 /* Hook+Helper.swift */; };
+		B2EB12CC2983963C009B1271 /* Hook.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EB12CA2983963C009B1271 /* Hook.swift */; };
 		B5CA3CA57099244DCC23DFCCE3AC5CAB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		C9331E7B92C4A9D9186BA601D39387B1 /* Hook-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A6910CCE2A72750979C9ED79736D658 /* Hook-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E0B4E945497506FE6700CA2C7FD99DA7 /* Pods-Hook_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FFB6DC821B4EA6E1DD17E97094A445FE /* Pods-Hook_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -56,11 +56,11 @@
 		891D8EF76D57D23F35DFAF53DA4CDFF5 /* Pods-Hook_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Hook_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		8ECF03354A2C0FAAF29D35D790BB16FF /* Pods_Hook_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hook_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A11EBD0F2982C3D30010BC84 /* Hook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hook.swift; path = Hook/Hook.swift; sourceTree = "<group>"; };
-		A11EBD102982C3D30010BC84 /* Hook+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Hook+Helper.swift"; path = "Hook/Hook+Helper.swift"; sourceTree = "<group>"; };
 		A57D811D3DEE78253A13189DEECA8310 /* Pods-Hook_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Hook_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		A8519C13B0F5A37D3A61A5BE3C9170F9 /* Pods-Hook_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Hook_Example.release.xcconfig"; sourceTree = "<group>"; };
 		AB51E95B6066DCF87FCE57F3768CDFC3 /* Pods-Hook_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Hook_Example-frameworks.sh"; sourceTree = "<group>"; };
+		B2EB12C92983963C009B1271 /* Hook+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Hook+Helper.swift"; path = "Sources/Hook/Hook+Helper.swift"; sourceTree = "<group>"; };
+		B2EB12CA2983963C009B1271 /* Hook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hook.swift; path = Sources/Hook/Hook.swift; sourceTree = "<group>"; };
 		C8275120823159D6846B1FF56D04DB7D /* Pods-Hook_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Hook_Tests-umbrella.h"; sourceTree = "<group>"; };
 		C8E2C7F6C8F23852A86F97BA6B3D17F2 /* Hook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Hook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C94CCE6945C7C9B0E19D30C2857F1B01 /* Pods-Hook_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Hook_Example-dummy.m"; sourceTree = "<group>"; };
@@ -129,8 +129,8 @@
 		383EFE4AC613A39B50092D09AF59B634 /* Hook */ = {
 			isa = PBXGroup;
 			children = (
-				A11EBD0F2982C3D30010BC84 /* Hook.swift */,
-				A11EBD102982C3D30010BC84 /* Hook+Helper.swift */,
+				B2EB12CA2983963C009B1271 /* Hook.swift */,
+				B2EB12C92983963C009B1271 /* Hook+Helper.swift */,
 				8948C9CCAF538F35991408EA3A249EA4 /* Pod */,
 				9BBD9B0EB8EE8BDC97398184CD4C666E /* Support Files */,
 			);
@@ -375,8 +375,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A11EBD122982C3D30010BC84 /* Hook+Helper.swift in Sources */,
-				A11EBD112982C3D30010BC84 /* Hook.swift in Sources */,
+				B2EB12CB2983963C009B1271 /* Hook+Helper.swift in Sources */,
+				B2EB12CC2983963C009B1271 /* Hook.swift in Sources */,
 				28E5B5838FD03F971E20C43A4B9D70E2 /* Hook-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

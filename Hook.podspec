@@ -15,5 +15,5 @@ Pod::Spec.new do |s|
   s.author           = { 'lyfeoncloudnine' => 'lyfeoncloudnine@gmail.com' }
   s.source           = { :git => 'https://github.com/lyfeoncloudnine/Hook.git', :tag => s.version.to_s }
   s.ios.deployment_target = '11.0'
-  s.source_files = 'Hook/*'
+  s.source_files = 'Sources/Hook/*'
 end
