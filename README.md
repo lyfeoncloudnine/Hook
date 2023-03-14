@@ -29,7 +29,7 @@ view.addSubviews(yellowView, stackView, bottomTrailingView)
 stackView.addArrangedSubviews(greenView, redView)
 
 // Hook all side
-yellowView.hook.all(to: view, useSafeArea: false)
+yellowView.hook.all(to: view)
 
 // Hook top, leading, trailing
 stackView.hook
@@ -93,7 +93,7 @@ bView.hook
     .height(lessThanOrEqualTo: aView.heightAnchor)
 ```
 
-You can reduce typing via `all(to:useSafeArea:)`.
+You can reduce typing via `all(to:topConstant:leadingConstant:bottomConstant:trailingConstant:safeAreaSides)`.
 
 ```swift
 bView.hook.all(to: self)
@@ -127,7 +127,7 @@ iOS 11.0+
 ### Cocoapods
 
 Hook is available through [CocoaPods](https://cocoapods.org). 
-To installit, simply add the following line to your `Podfile`:
+To install it, simply add the following line to your `Podfile`:
 
 ```ruby
 pod 'Hook'
