@@ -334,22 +334,20 @@ public extension UIView.Hook {
 // MARK: - Combination
 
 public extension UIView.Hook {
+    enum SafeAreaSide {
+        case top
+        case leading
+        case bottom
+        case trailing
+    }
+    
     @discardableResult
-    func all(to superView: UIView, topConstant: CGFloat = 0, leadingConstant: CGFloat = 0, bottomConstant: CGFloat = 0, trailingConstant: CGFloat = 0, useSafeArea: Bool = true) -> UIView.Hook {
-        if useSafeArea {
-            view.hook
-                .top(equalTo: superView.safeAreaLayoutGuide.topAnchor, constant: topConstant)
-                .leading(equalTo: superView.leadingAnchor, constant: leadingConstant)
-                .bottom(equalTo: superView.safeAreaLayoutGuide.bottomAnchor, constant: bottomConstant)
-                .trailing(equalTo: superView.trailingAnchor, constant: trailingConstant)
-            
-        } else {
-            view.hook
-                .top(equalTo: superView.topAnchor, constant: topConstant)
-                .leading(equalTo: superView.leadingAnchor, constant: leadingConstant)
-                .bottom(equalTo: superView.bottomAnchor, constant: bottomConstant)
-                .trailing(equalTo: superView.trailingAnchor, constant: trailingConstant)
-        }
+    func all(to superview: UIView, topConstant: CGFloat = 0, leadingConstant: CGFloat = 0, bottomConstant: CGFloat = 0, trailingConstant: CGFloat = 0, safeAreaSides: [SafeAreaSide] = []) -> UIView.Hook {
+        view.hook
+            .top(equalTo: safeAreaSides.contains(where: { $0 == .top }) ? superview.safeAreaLayoutGuide.topAnchor : superview.topAnchor)
+            .leading(equalTo: safeAreaSides.contains(where: { $0 == .leading }) ? superview.safeAreaLayoutGuide.leadingAnchor : superview.leadingAnchor)
+            .bottom(equalTo: safeAreaSides.contains(where: { $0 == .bottom }) ? superview.safeAreaLayoutGuide.bottomAnchor : superview.safeAreaLayoutGuide.bottomAnchor)
+            .trailing(equalTo: safeAreaSides.contains(where: { $0 == .trailing }) ? superview.safeAreaLayoutGuide.trailingAnchor : superview.trailingAnchor)
         
         return self
     }

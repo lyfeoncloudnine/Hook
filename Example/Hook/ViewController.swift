@@ -35,7 +35,7 @@ class ViewController: UIViewController {
         stackView.addArrangedSubviews(greenView, redView)
         
         // Hook all side
-        yellowView.hook.all(to: view, useSafeArea: false)
+        yellowView.hook.all(to: view)
         
         // Hook top, leading, trailing
         stackView.hook
