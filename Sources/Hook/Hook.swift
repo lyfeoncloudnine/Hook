@@ -346,7 +346,7 @@ public extension UIView.Hook {
         view.hook
             .top(equalTo: safeAreaSides.contains(where: { $0 == .top }) ? superview.safeAreaLayoutGuide.topAnchor : superview.topAnchor)
             .leading(equalTo: safeAreaSides.contains(where: { $0 == .leading }) ? superview.safeAreaLayoutGuide.leadingAnchor : superview.leadingAnchor)
-            .bottom(equalTo: safeAreaSides.contains(where: { $0 == .bottom }) ? superview.safeAreaLayoutGuide.bottomAnchor : superview.safeAreaLayoutGuide.bottomAnchor)
+            .bottom(equalTo: safeAreaSides.contains(where: { $0 == .bottom }) ? superview.safeAreaLayoutGuide.bottomAnchor : superview.bottomAnchor)
             .trailing(equalTo: safeAreaSides.contains(where: { $0 == .trailing }) ? superview.safeAreaLayoutGuide.trailingAnchor : superview.trailingAnchor)
         
         return self
