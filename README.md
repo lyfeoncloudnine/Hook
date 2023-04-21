@@ -81,15 +81,15 @@ NSLayoutConstraint.activate([
 addSubviews(aView, bView)
 
 aView.hook
-    .top(to: topAnchor)
-    .leading(to: leadingAnchor, constant: 20)
-    .trailing(to: trailingAnchor, constant: -20)
+    .top(equalTo: topAnchor)
+    .leading(equalTo: leadingAnchor, constant: 20)
+    .trailing(equalTo: trailingAnchor, constant: -20)
     .height(greaterThanOrEqualConstant: 40)
 
 bView.hook
-    .top(to: aView.bottomAnchor, constant: 10)
-    .centerX(to: aView.centerXAnchor)
-    .width(to: aView.widthAnchor, multiplier: 1.2)
+    .top(equalTo: aView.bottomAnchor, constant: 10)
+    .centerX(equalTo: aView.centerXAnchor)
+    .width(equalTo: aView.widthAnchor, multiplier: 1.2)
     .height(lessThanOrEqualTo: aView.heightAnchor)
 ```
 
