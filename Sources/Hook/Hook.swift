@@ -365,7 +365,7 @@ public extension UIView.Hook {
     }
     
     private func lookForConstraint(in view: UIView?, attribute: NSLayoutConstraint.Attribute) -> NSLayoutConstraint? {
-        guard let constraints = view?.constraints else { return nil }
+        guard let constraints = view?.constraints.filter({ type(of: $0) == NSLayoutConstraint.self }) else { return nil }
         
         for constraint in constraints {
             if let firstItem = constraint.firstItem as? NSObject,
